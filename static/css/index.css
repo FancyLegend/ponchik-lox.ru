@@ -1,0 +1,201 @@
+@import 'https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,500&display=swap';
+
+@import 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap';
+
+@import 'https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,500&family=Rubik+Mono+One&display=swap';
+
+@import 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap';
+
+@import 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Inter:wght@600&display=swap';
+
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,500,300,700';
+
+@import 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Inter:wght@600&family=Yanone+Kaffeesatz:wght@300&display=swap';
+
+@import 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Inter:wght@600&family=Oswald&family=Yanone+Kaffeesatz:wght@300&display=swap';
+
+@import 'https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap';
+
+@import 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;600&display=swap';
+
+@font-face {
+    font-family:gilroy;src:url(/static/fonts/Gilroy-BlackItalic.ttf) format('truetype');font-display: swap;
+}
+
+@font-face {
+    font-family:golosuiwebmedium;src:url(/static/fonts/Golos.ttf) format('truetype');font-display: swap;
+}
+
+@font-face {
+    font-family:gotham;src:url(/static/fonts/Gotham.otf) format('truetype');font-display: swap;
+}
+
+@font-face {
+    font-family:circular std;src:url(/static/fonts/CircularStd.ttf) format('truetype');font-display: swap;
+}
+
+@font-face {
+    font-family:sf-pro-display-regular;src:url(/static/fonts/Sf/SF-Pro-Display-Regular.otf) format('truetype');font-display: swap;
+}
+
+@font-face {
+    font-family:intro;src:url(/static/fonts/Intro/IntroDemo-BlackCAPS.otf) format('truetype');font-display: swap;
+}
+@font-face {
+    font-family:graph;src:url(/static/fonts/Graph.ttf) format('truetype');font-display: swap;
+}
+:root {
+
+    --colorBrand_03: #070510;--colorPage: #000;
+    --colorWhite: #fff;
+    --colorBlack: #000;
+    --colorPurple: #9100ff;
+    --colorBlue: #5865f2;
+    --colorBg: #1E2023;
+    --colorBtnBlack: #000000;
+    --colorBtnGray: #1a1919;
+    --colorCard: #ffffff24;
+    --colorBtnTag: #ffffff24;
+    --colorUser: #44444466;
+    --colorBluePurple: #8a2be2;
+    --colorShadowBluePurple: #8700ff85;
+    --paddingTag: 0.3rem 1.5rem;
+    --maxWidth: 1400px;
+    --widthProcent: 90%;
+    --ButtonPadding: 0.35rem 20px;
+    --transitionBtn: all .35s
+
+cubic-bezier(.4, 0, .2, 1);
+    --fontGolos: GolosUIWebMedium, sans-serif;
+    --colorWhiteOpacity:
+
+rgb(113, 118, 123);
+    --fontIntro: Intro, sans-serif;
+    --fontSF: SF-Pro-Display-Regular, sans-serif;
+    --fontCircular: Circular Std, sans-serif;
+    --fontGotham: Gotham, sans-serif;
+    --fontGilroy: Gilroy, sans-serif;
+    --fontRedHatDisplay: RedHatDisplay, sans-serif;
+    --fontComfortaa: Comfortaa, sans-serif;
+    --fontSlush: Slush, sans-serif;
+    --fontNoto: Noto+Sans, sans-serif;
+    --fontGraph: Graph, sans-serif;
+}
+
+body {
+      background: #1A1A1A;
+      }
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #ffffff7a;
+    font-weight: normal;
+    font-size: 14px;
+
+}
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #201e28;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff3366;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+* {
+    font-family: var(--fontSlush);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.items_center {
+    display: -webkit-box;
+    gap: 25px;
+    justify-self: center;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+a.select_tag {
+    color: #fff;
+}
+
+.big_text {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    display: flex;
+}
+
+
+
+.big_text h1 {
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg,#ff3366 20%,#ff3366);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 45px;
+    line-height: normal;
+    font-weight: 900;
+    display: inline-block;
+    font-family: var(--fontGraph);
+}
+
+
+p.default_text {
+    color: #eeebeb;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 15px;
+    font-size: 22px;
+    line-height: 1.2em;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.footer {
+    /* margin: 20px auto; */
+    background: #2d2f39;
+    font-size: 15px;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    font-family: slush;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem 0;
+    flex-direction: column;
+    z-index: 100;
+    position: relative;
+}
+
+.footer_wrap {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 2rem 0;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}

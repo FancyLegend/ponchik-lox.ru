@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-bs-theme="dark">
+<html lang="ru">
 
 <head>
     <meta charset="utf-8">
@@ -8,226 +8,102 @@
     <title>Пончик - лох</title>
     <meta name="description" content="Почему же Пончик - лох? Давайте решим это вместе!">
     <link rel="shortcut icon" href="https://cdn130.picsart.com/238501862038212.png" type="image/x-icon">
+    <link rel="preload" as="font" href="/static/fonts/Slush.ttf" crossorigin>
+    <meta name="theme-color" content="#1A1A1A"/>
 <!-- Стили -->
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/header.css">
+
 </head>
-
 <body>
-    
-    <style>
-        /* Шрифты */
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
 
-/* Стили */
+<header >
+    <!-- Логотип ссылка -->
+    <a href="/" class="home_link"><img class="header_home" rel="preconnect" src="static/img/logo.png" alt="Логотип" height="40" width="100" loading="lazy" decoding="async"></a>
+    <!-- Быстрые ссылки                           -->
+    <div style="color: white !important;" class="header_links">
+        <a class="header_links" href="https://github.com/FancyLegend" target="_blank">GitHub</a>
+        <a class="header_links" href="https://discord.gg/QeMeZQEB7K" target="_blank">Discord</a>
+        <a class="header_links" href="https://t.me/fl_corporation" target="_blank">Telegram</a> 
+        <a class="header_links" href="https://github.com/FancyLegend/ponchik-lox.ru/blob/main/index.html" target="_blank">Код сайта</a>
+    </div>
 
-.block-header {
-    color: blueviolet;
-    text-align: center;
-    font-size: 42px;
-    font-weight: bold;
-    font-family: 'Comfortaa', sans-serif;
-}
-
-.block-text {
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-size: 22px;
-    font-family: 'Exo 2', sans-serif;
-}
-
-p {
-    margin: 0.5em 0;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.copyright {
-    color: rgb(68, 68, 68);
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Comfortaa', sans-serif;
-    text-align: center;
-}
-
-.copyright-white {
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    font-weight: lighter;
-    font-family: 'Comfortaa', sans-serif;
-    text-align: center;
-}
-
-.color-cop {
-    color: blueviolet;
-}
-
-.contacts {
-    font-size: 15px;
-    font-weight: bold;
-    font-family: 'Comfortaa', sans-serif;
-    text-align: center;
-}
-
-.link {
-    text-decoration: none;
-    color: rgb(68, 68, 68);
-    transition: color 0.8s ease;
-}
-
-.link:hover {
-    text-decoration: none;
-    color: blueviolet;
-    transition: color 0.8s ease;
-}
-
-
-#menu__toggle {
-  opacity: 0;
-}
-
-#menu__toggle:checked + .menu__btn > span {
-  transform: rotate(45deg);
-}
-
-#menu__toggle:checked + .menu__btn > span::before {
-  top: 0;
-  transform: rotate(0deg);
-}
-
-#menu__toggle:checked + .menu__btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
-}
-#menu__toggle:checked ~ .menu__box {
-  left: 0 !important;
-}
-
-.menu__btn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: blueviolet;
-  transition-duration: .25s;
-}
-
-.menu__btn > span::before {
-  content: '';
-  top: -8px;
-}
-
-.menu__btn > span::after {
-  content: '';
-  top: 8px;
-}
-
-.menu__box {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 300px;
-  height: 100%;
-  margin: 0;
-  padding: 80px 0;
-  list-style: none;
-  background-color: #ECEFF1;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-  transition-duration: .25s;
-}
-
-.menu__item {
-  display: block;
-  padding: 12px 24px;
-  color: blueviolet;
-  font-family: 'Comfortaa', sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  text-decoration: none;
-  transition-duration: .25s;
-}
-
-.menu__item:hover {
-  background-color: #CFD8DC;
-}
-
-    </style>
-    
-    <div>
+    <!--
+    <div onclick="openbox('profile_menu'); return false" class="header_profile">
+      
+        <img style="cursor: pointer;user-select: none;border: none;width: 40px;height: 40px;box-shadow: none;margin-right: 10px;padding: 8px;" rel="nofollow preconnect" class="avatar_user" src="static/img/menu.svg" alt="Открыть меню" loading="lazy" decoding="async"> 
+      <div data-wow-duration="1s" style="display: none;" id="profile_menu" class="wow animate__fadeIn">
         
-    <div class="hamburger-menu">
-        <input id="menu__toggle" type="checkbox" />
-        <label class="menu__btn" for="menu__toggle">
-        <span></span>
-        </label>
+        <a href="https://github.com/FancyLegend" target="_blank">GitHub</a>
+        <a href="https://discord.gg/QeMeZQEB7K" target="_blank">Discord</a>
+        <a href="https://t.me/fl_corporation" target="_blank">Telegram</a>
+        <a href="https://github.com/FancyLegend/ponchik-lox.ru/blob/main/index.html" target="_blank">Код сайта</a>
+      </div>
+    </div>
+    -->
 
-      <ul class="menu__box">
-      <li><a class="menu__item" href="https://github.com/FancyLegend" target="_blank">GitHub</a></li>
-      <li><a class="menu__item" href="https://discord.gg/QeMeZQEB7K" target="_blank">Discord</a></li>
-      <li><a class="menu__item" href="https://t.me/fl_corporation" target="_blank">Telegram</a></li>
-      <li><a class="menu__item" href="https://github.com/FancyLegend/ponchik-lox.ru/blob/main/index.html" target="_blank">Код сайта</a></li>
-<!--  <br><br>
-      <li><a class="menu__item" href="#" target="_blank" style="color: black">Связаться лично</a></li>
--->
-      <br>
-      <li><p class="menu__item" style="color: black">FLC <span class="color-cop">©</span> 2023</p></li>
-    </ul>
-  </div>
-  
-        <p class="block-header">Почему же Пончик лох?</p>
-        <p class="block-text">Пончик - это ужасная личность, которая привлекает внимание окружающих своим похуизмом и лохизмом, 
+</header>
+
+<div class="big_text">
+    <h1>Почему же Пончик лох?</h1>
+</div>
+<p class="default_text">Пончик - это ужасная личность, которая привлекает внимание окружающих своим похуизмом и лохизмом, 
         а также хуевыми чертами характера. Его невероятная фраза "пакажы саит" заставила привдива показать сайт. 
         Невероятная уверенность в себе вызывает искренний интерес у людей, а его решение не доплачивать за Супер Админа 
         лишь усиливает его невъебатость.</p>
 
-        <p class="block-header">Пончик отрицает факт, что он - лох!</p>
-        <p class="block-text">Пончик с уверенностью заявляет, что для доказательства своей крутости ему не требуются пруфы. 
-            Вместо этого он предлагает вам войти в контакт с ним через Discord, где вы сможете лично пообщаться с ним и, 
-            возможно, сами поймете, что делает его таким особенным. Это вызывает дополнительный интерес и интригу, 
-            поднимая вопросы о том, какие тайны скрываются за его крутым фасадом.</p>
-            
-        <p class="block-header">Как убедиться, что Пончик - лох?</p>
-        <p class="block-text">Пончик также указывает свой Discord-контакт (_josip_broztito), 
-            предоставляя вам возможность вступить в контакт с ним и узнать больше о его лохизме и похуизме. 
-            Этот контакт добавляет элемент интриги и вызывает желание узнать больше о жизни Буки и Лоха, 
-            который скрывается за именем "Пончик".</p>
+<div class="big_text">
+    <h1>Пончик отрицает факт, что он - лох!</h1>
+</div>
+<p class="default_text">Пончик с уверенностью заявляет, что для доказательства своей крутости ему не требуются пруфы. 
+    Вместо этого он предлагает вам войти в контакт с ним через Discord, где вы сможете лично пообщаться с ним и, 
+    возможно, сами поймете, что делает его таким особенным. Это вызывает дополнительный интерес и интригу, 
+    поднимая вопросы о том, какие тайны скрываются за его крутым фасадом.</p>
 
-        <p class="block-header">Как взбесить лоха Пончика?</p>
-        <p class="block-text">Чтобы понять, как взаимодействовать с Пончиком, он предлагает два интересных варианта: 
-            разхуярить его шкаф с целью раскрыть его секреты или попробовать лишить его Супер Админа. 
-            Эти действия могут показаться амбициозными и вызывают дополнительное внимание к загадочной личности Пончика.</p>
+<div class="big_text">
+    <h1>Как убедиться, что Пончик - лох?</h1>
+</div>
+<p class="default_text">Пончик также указывает свой Discord-контакт (_josip_broztito), 
+    предоставляя вам возможность вступить в контакт с ним и узнать больше о его лохизме и похуизме. 
+    Этот контакт добавляет элемент интриги и вызывает желание узнать больше о жизни Буки и Лоха, 
+    который скрывается за именем "Пончик".</p>
 
-        <p class="block-header">Что готов сделать Пончик?</p>
-        <p class="block-text">Пончик готов в реальной жизни разъебать нахуй Даниилмаса и Виндовса.</p>
+<div class="big_text">
+    <h1>Как взбесить лоха Пончика?</h1>
+</div>
+<p class="default_text">Чтобы понять, как взаимодействовать с Пончиком, он предлагает два интересных варианта: 
+    разхуярить его шкаф с целью раскрыть его секреты или попробовать лишить его Супер Админа. 
+    Эти действия могут показаться амбициозными и вызывают дополнительное внимание к загадочной личности Пончика.</p>
 
-        <p class="block-header">Что любит делать Пончик?</p>
-        <p class="block-text">Пончик очень любит кошмарить в людей, в его приоритет входят: Точечка, Фантом.</p>
+<div class="big_text">
+    <h1>Что готов сделать Пончик?</h1>
+</div>
+<p class="default_text">Пончик готов в реальной жизни разъебать нахуй Даниилмаса и Виндовса.</p>
 
-        <p class="block-header">Сделаем выводы!</p>
-        <p class="block-text">В итоге, Пончик оставляет за собой множество вопросов и вызывает желание исследовать его личность, 
-            а также более глубоко отсосать, что сделает его еще более привлекательным и загадочным персонажем.</p>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <p class="copyright">Fancy_Legend Corporation <span class="color-cop">©</span> 2023</p>
-        <p class="copyright-white">Пончик лох</p>
-        <br/>
-    </div>
+<div class="big_text">
+    <h1>Что любит делать Пончик?</h1>
+</div>
+<p class="default_text">Пончик очень любит кошмарить в людей, в его приоритет входят: Точечка, Фантом.</p>
+
+<div class="big_text">
+    <h1>Сделаем выводы!</h1>
+</div>
+<p class="default_text">В итоге, Пончик оставляет за собой множество вопросов и вызывает желание исследовать его личность, 
+    а также более глубоко отсосать, что сделает его еще более привлекательным и загадочным персонажем.</p>
+<br>
+<!--
+<br>
+<br>
+<p class="copyright">Fancy_Legend Corporation <span class="color-cop">©</span> 2023</p>
+<br>
+-->
+</main> 
+
+<footer>
+    <div class="footer_wrap">
+          <span>Fancy_Legend Corporation <span style="color: #ff3366;">©</span> 2023</span>
+    </div> 
+</footer>
+
 </body>
-
 </html>
